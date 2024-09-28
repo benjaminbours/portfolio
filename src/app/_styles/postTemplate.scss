@@ -1,0 +1,47 @@
+.post-template {
+  h1 {
+    font-size: 4.25rem;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.post-template__header {
+  display: flex;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  border-bottom: solid var(--darkBlue-40) 1px;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  @media (max-width: 768px) {
+    margin: 2rem 0;
+  }
+}
+
+.post-template__end {
+  text-align: right;
+}
+
+.post-template__author {
+  margin-top: 1rem;
+}

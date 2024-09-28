@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import DateFormatter from "./date-formatter";
+import DateFormatter from "@/app/_components/01_atoms/date-formatter";
 import { Post } from "@/interfaces/post";
 
 export function PostPreview({
@@ -31,7 +31,7 @@ export function PostPreview({
             ))}
           </ul>
         )}
-        <h3>{title}</h3>
+        <h3 className="post-preview__title">{title}</h3>
         <DateFormatter dateString={date} />
         <p>{excerpt}</p>
       </div>
