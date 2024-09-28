@@ -1,41 +1,40 @@
-import { type Author } from "@/interfaces/author";
 import Link from "next/link";
-import Avatar from "./avatar";
-import CoverImage from "./cover-image";
+import Image from "next/image";
 import DateFormatter from "./date-formatter";
-
-type Props = {
-  title: string;
-  coverImage: string;
-  date: string;
-  excerpt: string;
-  author: Author;
-  slug: string;
-};
+import { Post } from "@/interfaces/post";
 
 export function PostPreview({
   title,
   coverImage,
   date,
   excerpt,
-  author,
   slug,
-}: Props) {
+  tags,
+}: Post) {
   return (
-    <div>
-      <div className="mb-5">
-        <CoverImage slug={slug} title={title} src={coverImage} />
-      </div>
-      <h3 className="text-3xl mb-3 leading-snug">
-        <Link href={`/posts/${slug}`} className="hover:underline">
-          {title}
-        </Link>
-      </h3>
-      <div className="text-lg mb-4">
+    <Link className="post-preview" href={`/posts/${slug}`} aria-label={title}>
+      <Image
+        src={coverImage}
+        alt={`Cover Image for ${title}`}
+        width={1300}
+        height={630}
+      />
+      <div className="post-preview__content-container">
+        {tags && tags.length > 0 && (
+          <ul className="post-preview__tag-list">
+            {tags.map((tag) => (
+              <li>
+                <span className="tag" key={tag}>
+                  {tag}
+                </span>
+              </li>
+            ))}
+          </ul>
+        )}
+        <h3>{title}</h3>
         <DateFormatter dateString={date} />
+        <p>{excerpt}</p>
       </div>
-      <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture} />
-    </div>
+    </Link>
   );
 }
