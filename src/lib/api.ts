@@ -6,13 +6,13 @@ import { join } from "path";
 
 const postsDirectory = join(process.cwd(), "_posts");
 
-export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory);
+export function getPostSlugs(lang: string) {
+  return fs.readdirSync(join(postsDirectory, lang));
 }
 
-export function getPostBySlug(slug: string) {
+export function getPostBySlug(lang: string, slug: string) {
   const realSlug = slug.replace(/\.md$/, "");
-  const fullPath = join(postsDirectory, `${realSlug}.md`);
+  const fullPath = join(postsDirectory, lang, `${realSlug}.md`);
   const fileExist = fs.existsSync(fullPath);
   if (!fileExist) {
     notFound();
@@ -23,10 +23,10 @@ export function getPostBySlug(slug: string) {
   return { ...data, slug: realSlug, content } as Post;
 }
 
-export function getAllPosts(): Post[] {
-  const slugs = getPostSlugs();
+export function getAllPosts(lang: string): Post[] {
+  const slugs = getPostSlugs(lang);
   const posts = slugs
-    .map((slug) => getPostBySlug(slug))
+    .map((slug) => getPostBySlug(lang, slug))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;

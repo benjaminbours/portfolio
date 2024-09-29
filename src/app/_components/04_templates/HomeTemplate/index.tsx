@@ -4,9 +4,10 @@ import { Post } from "@/interfaces/post";
 
 interface Props {
   posts: Post[];
+  lang: string;
 }
 
-export const HomeTemplate: React.FC<Props> = ({ posts }) => {
+export const HomeTemplate: React.FC<Props> = ({ posts, lang }) => {
   return (
     <main className="home-template">
       <div className="container">
@@ -22,7 +23,7 @@ export const HomeTemplate: React.FC<Props> = ({ posts }) => {
           <ul className="post-list">
             {posts.map((post) => (
               <li className="post-list__item" key={post.slug}>
-                <PostPreview {...post} />
+                <PostPreview {...post} lang={lang} />
               </li>
             ))}
           </ul>

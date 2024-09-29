@@ -3,9 +3,10 @@ import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { PostTemplate } from "@/app/_components/04_templates/PostTemplate";
+import { LOCALES } from "@/lib/constants";
 
 export default async function Post({ params }: Params) {
-  const post = getPostBySlug(params.slug);
+  const post = getPostBySlug(params.lang, params.slug);
 
   if (!post) {
     return notFound();
@@ -13,17 +14,18 @@ export default async function Post({ params }: Params) {
 
   const content = await markdownToHtml(post.content || "");
 
-  return <PostTemplate post={post} content={content} />;
+  return <PostTemplate post={post} content={content} lang={params.lang} />;
 }
 
 type Params = {
   params: {
+    lang: string;
     slug: string;
   };
 };
 
 export function generateMetadata({ params }: Params): Metadata {
-  const post = getPostBySlug(params.slug);
+  const post = getPostBySlug(params.lang, params.slug);
 
   if (!post) {
     return notFound();
@@ -43,9 +45,16 @@ export function generateMetadata({ params }: Params): Metadata {
 }
 
 export async function generateStaticParams() {
-  const posts = getAllPosts();
+  return LOCALES.reduce((acc, locale) => {
+    const posts = getAllPosts(locale);
 
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
+    posts.forEach((post) => {
+      acc.push({
+        lang: locale,
+        slug: post.slug,
+      });
+    });
+
+    return acc;
+  }, [] as any[]);
 }

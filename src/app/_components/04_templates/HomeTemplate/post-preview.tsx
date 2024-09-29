@@ -10,9 +10,14 @@ export function PostPreview({
   excerpt,
   slug,
   tags,
-}: Post) {
+  lang,
+}: Post & { lang: string }) {
   return (
-    <Link className="post-preview" href={`/posts/${slug}`} aria-label={title}>
+    <Link
+      className="post-preview"
+      href={`/${lang}/posts/${slug}`}
+      aria-label={title}
+    >
       <Image
         src={coverImage}
         alt={`Cover Image for ${title}`}

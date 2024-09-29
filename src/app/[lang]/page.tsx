@@ -8,8 +8,6 @@ interface Props {
 }
 
 export default function Index({ params }: Props) {
-  console.log("HERE", params.lang);
-
-  const posts = getAllPosts();
-  return <HomeTemplate posts={posts} />;
+  const posts = getAllPosts(params.lang);
+  return <HomeTemplate posts={posts} lang={params.lang} />;
 }

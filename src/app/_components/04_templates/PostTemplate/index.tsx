@@ -7,15 +7,16 @@ import DateFormatter from "../../01_atoms/date-formatter";
 interface Props {
   post: Post;
   content: string;
+  lang: string;
 }
 
-export const PostTemplate: React.FC<Props> = ({ post, content }) => {
+export const PostTemplate: React.FC<Props> = ({ post, content, lang }) => {
   return (
     <main className="post-template">
       <div className="container">
         <section className="post-template__header">
           <h2>
-            <Link className="main-title-link" href="/">
+            <Link className="main-title-link" href={`/${lang}`}>
               B<span className="highlight-text">B</span>Blog
             </Link>
           </h2>
