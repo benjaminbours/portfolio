@@ -14,7 +14,7 @@ export const Footer: React.FC<Props> = ({}) => {
         <Socials className="footer__socials" />
         <h2>
           <Link className="main-title-link" href="/">
-            B<span>B</span>Blog
+            B<span className="highlight-text">B</span>Blog
           </Link>
         </h2>
         <small>© BBBlog 2024</small>

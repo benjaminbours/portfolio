@@ -1,6 +1,7 @@
 import { Post } from "@/interfaces/post";
 import fs from "fs";
 import matter from "gray-matter";
+import { notFound } from "next/navigation";
 import { join } from "path";
 
 const postsDirectory = join(process.cwd(), "_posts");
@@ -12,6 +13,10 @@ export function getPostSlugs() {
 export function getPostBySlug(slug: string) {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
+  const fileExist = fs.existsSync(fullPath);
+  if (!fileExist) {
+    notFound();
+  }
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 

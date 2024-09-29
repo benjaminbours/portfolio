@@ -10,9 +10,9 @@ export const HomeTemplate: React.FC<Props> = ({ posts }) => {
   return (
     <main className="home-template">
       <div className="container">
-        <section className="intro-section home-template__header">
+        <section className="home-template__header">
           <h1 className="home-template__main-title">
-            B<span>B</span>Blog
+            B<span className="highlight-text">B</span>Blog
           </h1>
           <h2 className="home-template__subtitle">
             A blog about software development, and emerging technologies.

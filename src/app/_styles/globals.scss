@@ -36,6 +36,12 @@ time {
   font-size: 0.875rem;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .container {
   max-width: 1000px;
   margin-left: auto;
@@ -44,6 +50,31 @@ time {
 
   @media (max-width: 1050px) {
     padding: 0 1rem;
+  }
+}
+
+.highlight-text {
+  color: var(--orange-70);
+}
+
+.button {
+  background: var(--orange-70);
+  color: white;
+  padding: 10px;
+  display: inline-block;
+  border: solid transparent 1px;
+  transition: 0.3s ease-out;
+
+  @media (min-width: 769px) {
+    &:hover {
+      color: var(--orange-70);
+      border-color: var(--orange-70);
+      background: var(--darkBlue-90);
+
+      span {
+        color: white;
+      }
+    }
   }
 }
 
@@ -115,16 +146,15 @@ time {
 .main-title-link {
   transition: 0.3s ease-out;
 
-  span {
+  .highlight-text {
     transition: 0.3s ease-out;
-    color: var(--orange-70);
   }
 
   @media (min-width: 769px) {
     &:hover {
       color: var(--orange-70);
 
-      span {
+      .highlight-text {
         color: white;
       }
     }
