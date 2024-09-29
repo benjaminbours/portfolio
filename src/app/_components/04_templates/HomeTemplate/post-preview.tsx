@@ -23,10 +23,8 @@ export function PostPreview({
         {tags && tags.length > 0 && (
           <ul className="post-preview__tag-list">
             {tags.map((tag) => (
-              <li>
-                <span className="tag" key={tag}>
-                  {tag}
-                </span>
+              <li key={tag}>
+                <span className="tag">{tag}</span>
               </li>
             ))}
           </ul>

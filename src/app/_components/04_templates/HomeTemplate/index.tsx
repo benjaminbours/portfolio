@@ -22,7 +22,7 @@ export const HomeTemplate: React.FC<Props> = ({ posts }) => {
           <ul className="post-list">
             {posts.map((post) => (
               <li className="post-list__item" key={post.slug}>
-                <PostPreview key={post.slug} {...post} />
+                <PostPreview {...post} />
               </li>
             ))}
           </ul>
