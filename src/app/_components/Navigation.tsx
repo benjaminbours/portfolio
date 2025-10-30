@@ -44,8 +44,8 @@ export const Navigation: React.FC<Props> = ({ lang }) => {
   }, [lastScrollY]);
 
   const isActive = (path: string) => {
-    if (path === `/${lang}`) {
-      return pathname === `/${lang}` || pathname === `/${lang}/`;
+    if (path === `/`) {
+      return pathname === `/` || pathname === ``;
     }
     return pathname.startsWith(path);
   };
@@ -56,38 +56,38 @@ export const Navigation: React.FC<Props> = ({ lang }) => {
       onMouseEnter={() => setIsHidden(false)}
     >
       <div className="container navigation__container">
-        <Link href={`/${lang}`} className="navigation__logo">
+        <Link href="/" className="navigation__logo">
           <InteractiveBBB />
         </Link>
         <ul className="navigation__links">
           <li>
             <Link
-              href={`/${lang}`}
-              className={isActive(`/${lang}`) ? "active" : ""}
+              href="/"
+              className={isActive(`/`) ? "active" : ""}
             >
               Home
             </Link>
           </li>
           <li>
             <Link
-              href={`/${lang}/projects`}
-              className={isActive(`/${lang}/projects`) ? "active" : ""}
+              href="/projects"
+              className={isActive(`/projects`) ? "active" : ""}
             >
               Projects
             </Link>
           </li>
           {/* <li>
             <Link
-              href={`/${lang}/blog`}
-              className={isActive(`/${lang}/blog`) ? "active" : ""}
+              href="/blog"
+              className={isActive(`/blog`) ? "active" : ""}
             >
               Blog
             </Link>
           </li> */}
           <li>
             <Link
-              href={`/${lang}/about`}
-              className={isActive(`/${lang}/about`) ? "active" : ""}
+              href="/about"
+              className={isActive(`/about`) ? "active" : ""}
             >
               About
             </Link>

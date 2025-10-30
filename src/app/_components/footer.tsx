@@ -12,7 +12,7 @@ export const Footer: React.FC<Props> = ({ lang }) => {
       <div className="container">
         <Socials className="footer__socials" />
         <h2>
-          <Link className="main-title-link" href={`/${lang}/`}>
+          <Link className="main-title-link" href="/">
             B<span className="highlight-text">B</span>B
           </Link>
         </h2>

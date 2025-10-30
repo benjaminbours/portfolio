@@ -55,7 +55,7 @@ export const PortfolioHomeTemplate: React.FC<Props> = ({
             I love tackling complex technical challenges and bringing ideas to
             life.
           </p>
-          <Link href={`/${lang}/blog`} className="button">
+          <Link href="/blog" className="button">
             Read My Blog
           </Link>
         </section> */}
