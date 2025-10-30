@@ -20,9 +20,9 @@ export const AboutTemplate: React.FC<Props> = ({ lang }) => {
       expertise: {
         title: "Key Expertise",
         items: [
-          "Building systems from scratch (NFT marketplace, prediction platforms, 3D rendering applications)",
+          "Building systems from scratch (Prediction platforms, 3D multiplayer game, and more)",
           "Sports technology & data visualization (automated video production, prediction models, statistical analysis)",
-          "Desktop applications (Electron, file system management, 3D asset management)",
+          "Desktop applications (Electron, Dioxus)",
           "Technical leadership (leading migrations, architectural decisions, mentoring developers)",
           "Full-stack architecture (PostgreSQL/MongoDB, Node.js/Nest.js, React/Next.js, TypeScript)",
         ],
@@ -37,6 +37,7 @@ export const AboutTemplate: React.FC<Props> = ({ lang }) => {
             location: "Remote",
             description:
               "Building an Electron application connecting 3D artists to cloud rendering infrastructure. The platform integrates with 3ds Max and Blender through deep links and custom Python plugins, enabling project organization and render submission to spot-instance-based cloud infrastructure.",
+            tech: "TypeScript • React • Electron • Python",
           },
           {
             company: "KIT-AR",
@@ -45,6 +46,7 @@ export const AboutTemplate: React.FC<Props> = ({ lang }) => {
             location: "Hybrid",
             description:
               "Developed an Electron application for managing high-precision 3D assets and connecting them with work instructions for manufacturing industry builders. Implemented 3D rendering with Babylon.js and Three.js, local database management with SQLite/Prisma, and complex asset pipeline workflows.",
+            tech: "Babylon.js • Three.js • React • SQLite • Prisma • Electron",
           },
           {
             company: "SPORTRADAR",
@@ -53,14 +55,25 @@ export const AboutTemplate: React.FC<Props> = ({ lang }) => {
             location: "Hybrid",
             description:
               "Maintained and enhanced applications for automated video production systems. Led the migration from Backbone/jQuery to React/TypeScript with comprehensive E2E testing using Cypress and BDD methodology. Researched emerging technologies including Rust and GStreamer for future video processing capabilities.",
+            tech: "TypeScript • React • Cypress • BDD • Node.js • Docker • AWS • Ruby • PostgreSQL • Rust",
           },
           {
-            company: "BeQuest - NFT Marketplace",
-            role: "Freelance Full-Stack Engineer",
-            period: "2022 - 2023",
-            location: "Remote",
+            company: "ADNEOM",
+            role: "Consultant",
+            period: "Early 2019",
+            location: "On-site",
             description:
-              "Built a complete NFT marketplace from scratch on the XPR blockchain (EOSIO). As the main developer, architected and implemented the entire system including database design, REST API, smart contracts, internal CRM tool, and customer-facing marketplace frontend.",
+              "Consultancy agency role working on multiple client projects, notably a major project for Total Energies using Angular. Delivered full-stack solutions while adapting to diverse technical requirements and client environments.",
+            tech: "TypeScript • JavaScript • Angular • React • Node.js",
+          },
+          {
+            company: "ALPAGA STUDIO",
+            role: "Frontend Developer",
+            period: "2017 - 2019",
+            location: "On-site",
+            description:
+              "Frontend developer for web agency delivering projects for clients including Altissia, FEBE, and Europost. Built responsive websites, integrated with various CMS platforms, and collaborated with designers and backend developers to deliver high-quality web solutions.",
+            tech: "JavaScript • TypeScript • CSS • WordPress • PHP • Symfony • Next.js",
           },
         ],
       },
@@ -118,6 +131,15 @@ export const AboutTemplate: React.FC<Props> = ({ lang }) => {
       freelance: {
         title: "Selected Freelance & Teaching Experience",
         projects: [
+          {
+            name: "BeQuest - NFT Marketplace (XPR Network)",
+            role: "Full-Stack Engineer (Freelance)",
+            period: "2022 - 2023",
+            duration: "1.5 years",
+            description:
+              "Built a complete NFT marketplace from scratch on the XPR blockchain (EOSIO). As the main developer, architected and implemented the entire system including database design, REST API, smart contracts, internal CRM tool, and customer-facing marketplace frontend. Handled blockchain integration, wallet connectivity, and transaction processing while maintaining high code quality and comprehensive documentation.",
+            tech: "Docker • Nest.js • Next.js • PostgreSQL • Prisma • Smart Contracts • Blockchain • EOSIO • Monorepo",
+          },
           {
             name: "ShotQuality - Basketball Video Annotation Tool",
             role: "Full-Stack Engineer (Freelance)",
@@ -206,6 +228,7 @@ export const AboutTemplate: React.FC<Props> = ({ lang }) => {
             location: "Remote",
             description:
               "Construction d'une application Electron connectant les artistes 3D à une infrastructure de rendu cloud. La plateforme s'intègre avec 3ds Max et Blender via des liens profonds et des plugins Python personnalisés, permettant l'organisation de projets et la soumission de rendus à une infrastructure cloud basée sur des instances spot.",
+            tech: "TypeScript • React • Electron • Python",
           },
           {
             company: "KIT-AR",
@@ -214,6 +237,7 @@ export const AboutTemplate: React.FC<Props> = ({ lang }) => {
             location: "Hybride",
             description:
               "Développement d'une application Electron pour la gestion d'assets 3D haute précision et leur connexion avec des instructions de travail pour les constructeurs de l'industrie manufacturière. Implémentation du rendu 3D avec Babylon.js et Three.js, gestion de base de données locale avec SQLite/Prisma, et workflows complexes de pipeline d'assets.",
+            tech: "Babylon.js • Three.js • React • SQLite • Prisma • Electron",
           },
           {
             company: "SPORTRADAR",
@@ -222,14 +246,25 @@ export const AboutTemplate: React.FC<Props> = ({ lang }) => {
             location: "Hybride",
             description:
               "Maintenance et amélioration d'applications pour des systèmes de production vidéo automatisée. Direction de la migration de Backbone/jQuery vers React/TypeScript avec des tests E2E complets utilisant Cypress et la méthodologie BDD. Recherche de technologies émergentes incluant Rust et GStreamer pour les capacités futures de traitement vidéo.",
+            tech: "TypeScript • React • Cypress • BDD • Node.js • Docker • AWS • Ruby • PostgreSQL • Rust",
           },
           {
-            company: "BeQuest - NFT Marketplace",
-            role: "Ingénieur Full-Stack Freelance",
-            period: "2022 - 2023",
-            location: "Remote",
+            company: "ADNEOM",
+            role: "Consultant",
+            period: "Début 2019",
+            location: "Sur site",
             description:
-              "Construction d'une marketplace NFT complète from scratch sur la blockchain XPR (EOSIO). En tant que développeur principal, architecture et implémentation de l'ensemble du système incluant la conception de base de données, API REST, smart contracts, outil CRM interne et frontend marketplace client.",
+              "Rôle de consultant en agence travaillant sur plusieurs projets clients, notamment un projet majeur pour Total Energies utilisant Angular. Livraison de solutions full-stack tout en s'adaptant à divers besoins techniques et environnements clients.",
+            tech: "TypeScript • JavaScript • Angular • React • Node.js",
+          },
+          {
+            company: "ALPAGA STUDIO",
+            role: "Développeur Frontend",
+            period: "2017 - 2019",
+            location: "Sur site",
+            description:
+              "Développeur frontend pour une agence web livrant des projets pour des clients incluant Altissia, FEBE et Europost. Construction de sites web responsives, intégration avec diverses plateformes CMS, et collaboration avec designers et développeurs backend pour livrer des solutions web de haute qualité.",
+            tech: "JavaScript • TypeScript • CSS • WordPress • PHP • Symfony • Next.js",
           },
         ],
       },
@@ -287,6 +322,15 @@ export const AboutTemplate: React.FC<Props> = ({ lang }) => {
       freelance: {
         title: "Expérience Freelance & Enseignement Sélectionnée",
         projects: [
+          {
+            name: "BeQuest - NFT Marketplace (XPR Network)",
+            role: "Ingénieur Full-Stack (Freelance)",
+            period: "2022 - 2023",
+            duration: "1.5 ans",
+            description:
+              "Construction d'une marketplace NFT complète from scratch sur la blockchain XPR (EOSIO). En tant que développeur principal, architecture et implémentation de l'ensemble du système incluant la conception de base de données, API REST, smart contracts, outil CRM interne et frontend marketplace client. Gestion de l'intégration blockchain, connectivité des wallets, et traitement des transactions tout en maintenant une haute qualité de code et une documentation complète.",
+            tech: "Docker • Nest.js • Next.js • PostgreSQL • Prisma • Smart Contracts • Blockchain • EOSIO • Monorepo",
+          },
           {
             name: "ShotQuality - Outil d'Annotation Vidéo Basketball",
             role: "Ingénieur Full-Stack (Freelance)",
@@ -351,140 +395,133 @@ export const AboutTemplate: React.FC<Props> = ({ lang }) => {
   return (
     <main className="about-template">
       <div className="container">
-        {/* <section className="about-template__header">
-          <h2>
-            <Link className="main-title-link" href={`/${lang}`}>
-              B<span className="highlight-text">B</span>B
-            </Link>
-          </h2>
-        </section> */}
+        <h1>{t.title}</h1>
 
-        <article className="about-template__content">
-          <h1>{t.title}</h1>
+        <section className="about-template__intro">
+          <h3>{t.intro.headline}</h3>
+          <p className="about-template__subtitle">{t.intro.subtitle}</p>
+          <p>{t.intro.description}</p>
+          <p>{t.intro.additional}</p>
+        </section>
 
-          <section className="about-template__intro">
-            <h3>{t.intro.headline}</h3>
-            <p className="about-template__subtitle">{t.intro.subtitle}</p>
-            <p>{t.intro.description}</p>
-            <p>{t.intro.additional}</p>
-          </section>
+        <section className="about-template__section">
+          <h2>{t.expertise.title}</h2>
+          <ul>
+            {t.expertise.items.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </section>
 
-          <section className="about-template__section">
-            <h2>{t.expertise.title}</h2>
-            <ul>
-              {t.expertise.items.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </section>
-
-          <section className="about-template__section">
-            <h2>{t.experience.title}</h2>
-            <div className="about-template__experience">
-              {t.experience.jobs.map((job, index) => (
-                <div key={index} className="about-template__job">
-                  <h3>{job.company}</h3>
-                  <div className="about-template__job-meta">
-                    <span className="about-template__job-role">{job.role}</span>
-                    <span className="about-template__job-period">
-                      {job.period}
-                    </span>
-                    <span className="about-template__job-location">
-                      {job.location}
-                    </span>
-                  </div>
-                  <p>{job.description}</p>
+        <section className="about-template__section">
+          <h2>{t.experience.title}</h2>
+          <div className="about-template__experience">
+            {t.experience.jobs.map((job, index) => (
+              <div key={index} className="about-template__job">
+                <h3>{job.company}</h3>
+                <div className="about-template__job-meta">
+                  <span className="about-template__job-role">{job.role}</span>
+                  <span className="about-template__job-period">
+                    {job.period}
+                  </span>
+                  <span className="about-template__job-location">
+                    {job.location}
+                  </span>
                 </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="about-template__section">
-            <h2>{t.freelance.title}</h2>
-            <div className="about-template__freelance">
-              {t.freelance.projects.map((project, index) => (
-                <div key={index} className="about-template__freelance-project">
-                  <h3>{project.name}</h3>
-                  <div className="about-template__job-meta">
-                    <span className="about-template__job-role">
-                      {project.role}
-                    </span>
-                    <span className="about-template__job-period">
-                      {project.period}
-                      {project.duration && ` • ${project.duration}`}
-                    </span>
-                  </div>
-                  <p>{project.description}</p>
-                  <p className="about-template__tech-stack">
-                    <strong>Tech Stack:</strong> {project.tech}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="about-template__section">
-            <h2>{t.education.title}</h2>
-            <div className="about-template__education">
-              <div className="about-template__education-content">
-                <h3>{t.education.degree}</h3>
-                <p className="about-template__school">{t.education.school}</p>
-                <p className="about-template__distinction">
-                  {t.education.distinction}
+                <p>{job.description}</p>
+                <p className="about-template__tech-stack">
+                  <strong>Tech Stack:</strong> {job.tech}
                 </p>
               </div>
-              <div className="about-template__languages">
-                <h4>{t.education.languages.title}</h4>
-                <ul className="about-template__language-list">
-                  {t.education.languages.items.map((item, index) => (
-                    <li key={index}>
-                      <strong>{item.language}:</strong> {item.level}
+            ))}
+          </div>
+        </section>
+
+        <section className="about-template__section">
+          <h2>{t.freelance.title}</h2>
+          <div className="about-template__freelance">
+            {t.freelance.projects.map((project, index) => (
+              <div key={index} className="about-template__freelance-project">
+                <h3>{project.name}</h3>
+                <div className="about-template__job-meta">
+                  <span className="about-template__job-role">
+                    {project.role}
+                  </span>
+                  <span className="about-template__job-period">
+                    {project.period}
+                    {project.duration && ` • ${project.duration}`}
+                  </span>
+                </div>
+                <p>{project.description}</p>
+                <p className="about-template__tech-stack">
+                  <strong>Tech Stack:</strong> {project.tech}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="about-template__section">
+          <h2>{t.education.title}</h2>
+          <div className="about-template__education">
+            <div className="about-template__education-content">
+              <h3>{t.education.degree}</h3>
+              <p className="about-template__school">{t.education.school}</p>
+              <p className="about-template__distinction">
+                {t.education.distinction}
+              </p>
+            </div>
+            <div className="about-template__languages">
+              <h4>{t.education.languages.title}</h4>
+              <ul className="about-template__language-list">
+                {t.education.languages.items.map((item, index) => (
+                  <li key={index}>
+                    <strong>{item.language}:</strong> {item.level}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <p className="about-template__personality">
+              {t.education.personality}
+            </p>
+          </div>
+        </section>
+
+        <section className="about-template__section">
+          <h2>{t.skills.title}</h2>
+          <div className="about-template__skills">
+            {t.skills.categories.map((category, index) => (
+              <div key={index} className="about-template__skill-category">
+                <h3>{category.name}</h3>
+                <ul className="about-template__tag-list">
+                  {category.items.map((item, itemIndex) => (
+                    <li key={itemIndex}>
+                      <span className="tag">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <p className="about-template__personality">
-                {t.education.personality}
-              </p>
-            </div>
-          </section>
+            ))}
+          </div>
+        </section>
 
-          <section className="about-template__section">
-            <h2>{t.skills.title}</h2>
-            <div className="about-template__skills">
-              {t.skills.categories.map((category, index) => (
-                <div key={index} className="about-template__skill-category">
-                  <h3>{category.name}</h3>
-                  <ul className="about-template__tag-list">
-                    {category.items.map((item, itemIndex) => (
-                      <li key={itemIndex}>
-                        <span className="tag">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="about-template__section">
+        {/* <section className="about-template__section">
             <h2>{t.approach.title}</h2>
             <p>{t.approach.description}</p>
-          </section>
+          </section> */}
 
-          <section className="about-template__section">
-            <h2>{t.connect.title}</h2>
-            <p>{t.connect.description}</p>
-            <div className="about-template__connect-actions">
-              <a
-                href="mailto:boursbenjamin@gmail.com"
-                className="about-template__email-button button"
-              >
-                {t.connect.emailButton}
-              </a>
-            </div>
-          </section>
-        </article>
+        <section className="about-template__section">
+          <h2>{t.connect.title}</h2>
+          <p>{t.connect.description}</p>
+          <div className="about-template__connect-actions">
+            <a
+              href="mailto:boursbenjamin@gmail.com"
+              className="about-template__email-button button"
+            >
+              {t.connect.emailButton}
+            </a>
+          </div>
+        </section>
       </div>
     </main>
   );

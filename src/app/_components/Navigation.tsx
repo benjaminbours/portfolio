@@ -76,14 +76,14 @@ export const Navigation: React.FC<Props> = ({ lang }) => {
               Projects
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               href={`/${lang}/blog`}
               className={isActive(`/${lang}/blog`) ? "active" : ""}
             >
               Blog
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               href={`/${lang}/about`}
