@@ -14,3 +14,7 @@ export default function Index({ params }: Props) {
 
   return <PortfolioHomeTemplate featuredProjects={featuredProjects} lang={params.lang} />;
 }
+
+export async function generateStaticParams() {
+  return [{ lang: 'en' }];
+}

@@ -45,16 +45,10 @@ export function generateMetadata({ params }: Params): Metadata {
 }
 
 export async function generateStaticParams() {
-  return LOCALES.reduce((acc, locale) => {
-    const posts = getAllPosts(locale);
+  const posts = getAllPosts('en');
 
-    posts.forEach((post) => {
-      acc.push({
-        lang: locale,
-        slug: post.slug,
-      });
-    });
-
-    return acc;
-  }, [] as any[]);
+  return posts.map((post) => ({
+    lang: 'en',
+    slug: post.slug,
+  }));
 }

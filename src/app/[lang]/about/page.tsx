@@ -24,3 +24,7 @@ export function generateMetadata({ params }: Params): Metadata {
     },
   };
 }
+
+export async function generateStaticParams() {
+  return [{ lang: 'en' }];
+}

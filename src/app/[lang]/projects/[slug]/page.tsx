@@ -46,16 +46,10 @@ export function generateMetadata({ params }: Params): Metadata {
 }
 
 export async function generateStaticParams() {
-  return LOCALES.reduce((acc, locale) => {
-    const projects = getAllProjects(locale);
+  const projects = getAllProjects('en');
 
-    projects.forEach((project) => {
-      acc.push({
-        lang: locale,
-        slug: project.slug,
-      });
-    });
-
-    return acc;
-  }, [] as any[]);
+  return projects.map((project) => ({
+    lang: 'en',
+    slug: project.slug,
+  }));
 }
