@@ -1,4 +1,5 @@
 import { Footer } from "@/app/_components/footer";
+import { Navigation } from "@/app/_components/Navigation";
 import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -7,8 +8,8 @@ import "../_styles/main.scss";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `BBBlog`,
-  description: `A blog about software development, and emerging technologies.`,
+  title: `Benjamin Bours - Software Engineer`,
+  description: `Portfolio and blog of Benjamin Bours, software engineer crafting interactive experiences with modern web technologies.`,
   openGraph: {
     images: [HOME_OG_IMAGE_URL],
   },
@@ -58,6 +59,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <div className="main-container">
+          <Navigation lang={lang} />
           {children}
           <Footer lang={lang} />
         </div>

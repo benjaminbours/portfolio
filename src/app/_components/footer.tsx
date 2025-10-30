@@ -13,10 +13,10 @@ export const Footer: React.FC<Props> = ({ lang }) => {
         <Socials className="footer__socials" />
         <h2>
           <Link className="main-title-link" href={`/${lang}/`}>
-            B<span className="highlight-text">B</span>Blog
+            B<span className="highlight-text">B</span>B
           </Link>
         </h2>
-        <small>© BBBlog 2024</small>
+        <small>© Benjamin Bours 2025</small>
       </div>
     </footer>
   );

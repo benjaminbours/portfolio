@@ -1,5 +1,5 @@
-import { getAllPosts } from "@/lib/api";
-import { HomeTemplate } from "@/app/_components/04_templates/HomeTemplate";
+import { getAllProjects } from "@/lib/api";
+import { PortfolioHomeTemplate } from "@/app/_components/04_templates/PortfolioHomeTemplate";
 
 interface Props {
   params: {
@@ -8,6 +8,9 @@ interface Props {
 }
 
 export default function Index({ params }: Props) {
-  const posts = getAllPosts(params.lang);
-  return <HomeTemplate posts={posts} lang={params.lang} />;
+  const allProjects = getAllProjects(params.lang);
+  // Get featured projects or top 3 most recent
+  const featuredProjects = allProjects.filter(p => p.featured).slice(0, 3);
+
+  return <PortfolioHomeTemplate featuredProjects={featuredProjects} lang={params.lang} />;
 }

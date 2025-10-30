@@ -13,10 +13,10 @@ export const HomeTemplate: React.FC<Props> = ({ posts, lang }) => {
       <div className="container">
         <section className="home-template__header">
           <h1 className="home-template__main-title">
-            B<span className="highlight-text">B</span>Blog
+            B<span className="highlight-text">B</span>B
           </h1>
           <h2 className="home-template__subtitle">
-            A blog about software development, and emerging technologies.
+            Software engineer crafting interactive experiences and sharing thoughts on code.
           </h2>
         </section>
         <section>

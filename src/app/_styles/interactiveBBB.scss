@@ -1,0 +1,36 @@
+.interactive-bbb {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s ease-out;
+
+  .highlight-text {
+    transition: color 0.3s ease-out;
+  }
+
+  &__dynamic {
+    display: inline-block;
+    transition: all 0.3s ease-out;
+    position: relative;
+    overflow: hidden;
+    max-width: 0;
+    opacity: 0;
+  }
+
+  @media (min-width: 769px) {
+    &--hovered {
+      color: var(--orange-70);
+
+      .highlight-text {
+        color: white;
+      }
+
+      .interactive-bbb__dynamic {
+        color: var(--orange-70);
+        font-weight: 700;
+        max-width: 15ch;
+        opacity: 1;
+      }
+    }
+  }
+}

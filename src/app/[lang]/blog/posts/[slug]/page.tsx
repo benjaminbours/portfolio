@@ -31,7 +31,7 @@ export function generateMetadata({ params }: Params): Metadata {
     return notFound();
   }
 
-  const title = `${post.title} | BBBlog`;
+  const title = `${post.title} | Benjamin Bours`;
   const description = post.excerpt;
 
   return {

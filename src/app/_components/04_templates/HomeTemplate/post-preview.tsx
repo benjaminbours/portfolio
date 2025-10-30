@@ -15,7 +15,7 @@ export function PostPreview({
   return (
     <Link
       className="post-preview"
-      href={`/${lang}/posts/${slug}`}
+      href={`/${lang}/blog/posts/${slug}`}
       aria-label={title}
     >
       <Image

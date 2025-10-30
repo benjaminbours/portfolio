@@ -17,7 +17,7 @@ export const PostTemplate: React.FC<Props> = ({ post, content, lang }) => {
         <section className="post-template__header">
           <h2>
             <Link className="main-title-link" href={`/${lang}`}>
-              B<span className="highlight-text">B</span>Blog
+              B<span className="highlight-text">B</span>B
             </Link>
           </h2>
         </section>
