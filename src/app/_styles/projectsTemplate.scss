@@ -2,7 +2,6 @@
   padding: 4rem 0;
 
   &__header {
-    text-align: center;
     margin-bottom: 4rem;
   }
 
@@ -20,7 +19,6 @@
     font-size: 1.25rem;
     font-weight: 300;
     opacity: 0.8;
-    max-width: 600px;
     margin: 0 auto;
   }
 }
@@ -31,20 +29,40 @@
   margin: 0;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 2rem;
+
+  &__item {
+    margin: 2rem 0;
+  }
 }
 
 .project-preview {
-  display: grid;
-  gap: 1.5rem;
+  background: var(--darkBlue-60);
+  border-radius: 15px;
+  overflow: hidden;
+  border: solid var(--darkBlue-40) 1px;
+  transition: 0.3s ease-out;
+
+  @media (min-width: 769px) {
+    &:hover {
+      border-color: var(--darkBlue-30);
+
+      .project-preview__title {
+        text-decoration: underline;
+      }
+    }
+  }
 
   &__image-link {
     position: relative;
     overflow: hidden;
-    border-radius: 15px;
+    display: block;
 
     img {
       transition: 0.3s ease-out;
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     @media (min-width: 769px) {
@@ -58,7 +76,7 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: var(--orange-70);
+    background: var(--orange-50);
     padding: 0.5rem 1rem;
     border-radius: 10px;
     font-size: 0.875rem;
@@ -69,29 +87,26 @@
   &__content-container {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    padding: 20px;
+    box-sizing: border-box;
   }
 
   &__tag-list {
+    margin-bottom: 1rem;
     display: flex;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 10px;
+    scrollbar-width: none;
+    overflow: scroll;
+    width: 100%;
     list-style: none;
     padding: 0;
-    margin: 0;
-    flex-wrap: wrap;
-    overflow-x: auto;
+    margin-top: 0;
   }
 
   &__title {
     font-size: 1.5rem;
     font-weight: 700;
-    transition: 0.3s ease-out;
-
-    @media (min-width: 769px) {
-      &:hover {
-        color: var(--orange-70);
-      }
-    }
   }
 
   &__links {
@@ -108,5 +123,6 @@
 
   p {
     margin: 0;
+    margin-top: 1rem;
   }
 }

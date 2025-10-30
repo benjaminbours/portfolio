@@ -1,10 +1,10 @@
 ---
 title: 'Composite - 3D Multiplayer Game'
 excerpt: 'A real-time multiplayer 3D platformer game built with Three.js and WebSockets. Players navigate through challenging levels with physics-based mechanics in an immersive 3D environment.'
-coverImage: '/assets/blog/hello-world/cover.jpg'
-date: '2024-01-15'
+coverImage: '/assets/projects/composite-1.png'
+date: '2024-06-06'
 ogImage:
-  url: '/assets/blog/hello-world/cover.jpg'
+  url: '/assets/projects/composite-1.png'
 tags:
   - Three.js
   - WebSocket
@@ -12,12 +12,14 @@ tags:
   - Node.js
   - Multiplayer
 featured: true
-demoUrl: 'https://composite.yourdomain.com'
-githubUrl: 'https://github.com/yourusername/Composite'
+demoUrl: 'https://dev.compositethegame.com/en'
+githubUrl: 'https://github.com/benjaminbours/Composite'
 screenshots:
-  - '/assets/projects/composite-1.jpg'
-  - '/assets/projects/composite-2.jpg'
-  - '/assets/projects/composite-3.jpg'
+  - '/assets/projects/composite-1.png'
+  - '/assets/projects/composite-2.png'
+  - '/assets/projects/composite-3.png'
+  - '/assets/projects/composite-4.png'
+  - '/assets/projects/composite-5.png'
 ---
 
 ## Overview
