@@ -26,34 +26,34 @@ export default function RootLayout({
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
+          href={`${process.env.__NEXT_ROUTER_BASEPATH || ''}/favicon/apple-touch-icon.png`}
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/favicon/favicon-32x32.png"
+          href={`${process.env.__NEXT_ROUTER_BASEPATH || ''}/favicon/favicon-32x32.png`}
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/favicon/favicon-16x16.png"
+          href={`${process.env.__NEXT_ROUTER_BASEPATH || ''}/favicon/favicon-16x16.png`}
         />
-        <link rel="manifest" href="/favicon/site.webmanifest" />
-        <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+        <link rel="manifest" href={`${process.env.__NEXT_ROUTER_BASEPATH || ''}/favicon/site.webmanifest`} />
+        <link rel="icon" type="image/svg+xml" href={`${process.env.__NEXT_ROUTER_BASEPATH || ''}/favicon/favicon.svg`} />
         <link
           rel="shortcut icon"
           type="image/x-icon"
-          href="/favicon/favicon.ico"
+          href={`${process.env.__NEXT_ROUTER_BASEPATH || ''}/favicon/favicon.ico`}
         />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta
           name="msapplication-config"
-          content="/favicon/browserconfig.xml"
+          content={`${process.env.__NEXT_ROUTER_BASEPATH || ''}/favicon/browserconfig.xml`}
         />
         <meta name="theme-color" content="#000" />
-        <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+        <link rel="alternate" type="application/rss+xml" href={`${process.env.__NEXT_ROUTER_BASEPATH || ''}/feed.xml`} />
       </head>
       <body className={inter.className}>
         <div className="main-container">

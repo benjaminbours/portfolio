@@ -32,6 +32,9 @@ jobs:
         run: npm ci
 
       - name: Build with Next.js
+        env:
+          NEXT_PUBLIC_SITE_URL: https://benjaminbours.github.io/portfolio
+          NEXT_PUBLIC_BASE_PATH: /portfolio
         run: npm run build
 
       - name: Upload artifact
