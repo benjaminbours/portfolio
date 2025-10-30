@@ -3,10 +3,9 @@ import { notFound } from "next/navigation";
 import { getAllProjects, getProjectBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { ProjectTemplate } from "@/app/_components/04_templates/ProjectTemplate";
-import { LOCALES } from "@/lib/constants";
 
 export default async function Project({ params }: Params) {
-  const project = getProjectBySlug(params.lang, params.slug);
+  const project = getProjectBySlug('en', params.slug);
 
   if (!project) {
     return notFound();
@@ -14,18 +13,17 @@ export default async function Project({ params }: Params) {
 
   const content = await markdownToHtml(project.content || "");
 
-  return <ProjectTemplate project={project} content={content} lang={params.lang} />;
+  return <ProjectTemplate project={project} content={content} lang="en" />;
 }
 
 type Params = {
   params: {
-    lang: string;
     slug: string;
   };
 };
 
 export function generateMetadata({ params }: Params): Metadata {
-  const project = getProjectBySlug(params.lang, params.slug);
+  const project = getProjectBySlug('en', params.slug);
 
   if (!project) {
     return notFound();
@@ -49,7 +47,6 @@ export async function generateStaticParams() {
   const projects = getAllProjects('en');
 
   return projects.map((project) => ({
-    lang: 'en',
     slug: project.slug,
   }));
 }
