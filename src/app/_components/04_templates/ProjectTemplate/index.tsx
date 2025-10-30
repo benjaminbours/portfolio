@@ -5,6 +5,7 @@ import { Project } from "@/interfaces/project";
 import DateFormatter from "../../01_atoms/date-formatter";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { withBasePath } from "@/lib/constants";
 
 interface Props {
   project: Project;
@@ -22,7 +23,7 @@ export const ProjectTemplate: React.FC<Props> = ({
       <div className="container">
         <h1>{project.title}</h1>
         <Image
-          src={project.coverImage}
+          src={withBasePath(project.coverImage)}
           alt={`Cover Image for ${project.title}`}
           width={1300}
           height={630}
@@ -72,7 +73,7 @@ export const ProjectTemplate: React.FC<Props> = ({
               {project.screenshots.map((screenshot, index) => (
                 <Image
                   key={index}
-                  src={screenshot}
+                  src={withBasePath(screenshot)}
                   alt={`Screenshot ${index + 1} of ${project.title}`}
                   width={800}
                   height={500}

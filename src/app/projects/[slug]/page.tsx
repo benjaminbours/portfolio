@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getAllProjects, getProjectBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { ProjectTemplate } from "@/app/_components/04_templates/ProjectTemplate";
+import { withBasePath } from "@/lib/constants";
 
 export default async function Project({ params }: Params) {
   const project = getProjectBySlug('en', params.slug);
@@ -38,7 +39,7 @@ export function generateMetadata({ params }: Params): Metadata {
     openGraph: {
       title,
       description,
-      images: [project.ogImage.url],
+      images: [withBasePath(project.ogImage.url)],
     },
   };
 }

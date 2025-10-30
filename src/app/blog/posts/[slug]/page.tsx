@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { PostTemplate } from "@/app/_components/04_templates/PostTemplate";
+import { withBasePath } from "@/lib/constants";
 
 export default async function Post({ params }: Params) {
   const post = getPostBySlug('en', params.slug);
@@ -37,7 +38,7 @@ export function generateMetadata({ params }: Params): Metadata {
     description,
     openGraph: {
       title,
-      images: [post.ogImage.url],
+      images: [withBasePath(post.ogImage.url)],
     },
   };
 }

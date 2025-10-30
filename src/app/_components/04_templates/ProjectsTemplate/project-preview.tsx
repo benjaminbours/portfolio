@@ -4,6 +4,7 @@ import DateFormatter from "@/app/_components/01_atoms/date-formatter";
 import { Project } from "@/interfaces/project";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { withBasePath } from "@/lib/constants";
 
 export function ProjectPreview({
   title,
@@ -21,11 +22,11 @@ export function ProjectPreview({
     <div className="project-preview">
       <Link
         className="project-preview__image-link"
-        href={`/${lang}/projects/${slug}`}
+        href={`/projects/${slug}`}
         aria-label={title}
       >
         <Image
-          src={coverImage}
+          src={withBasePath(coverImage)}
           alt={`Cover Image for ${title}`}
           width={1300}
           height={630}
@@ -42,7 +43,7 @@ export function ProjectPreview({
             ))}
           </ul>
         )}
-        <Link href={`/${lang}/projects/${slug}`}>
+        <Link href={`/projects/${slug}`}>
           <h3 className="project-preview__title">{title}</h3>
         </Link>
         <DateFormatter dateString={date} />

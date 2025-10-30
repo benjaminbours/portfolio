@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { Post } from "@/interfaces/post";
 import DateFormatter from "../../01_atoms/date-formatter";
+import { withBasePath } from "@/lib/constants";
 
 interface Props {
   post: Post;
@@ -16,7 +17,7 @@ export const PostTemplate: React.FC<Props> = ({ post, content, lang }) => {
       <div className="container">
         <section className="post-template__header">
           <h2>
-            <Link className="main-title-link" href={`/${lang}`}>
+            <Link className="main-title-link" href="/">
               B<span className="highlight-text">B</span>B
             </Link>
           </h2>
@@ -24,7 +25,7 @@ export const PostTemplate: React.FC<Props> = ({ post, content, lang }) => {
         <article>
           <h1>{post.title}</h1>
           <Image
-            src={post.coverImage}
+            src={withBasePath(post.coverImage)}
             alt={`Cover Image for ${post.title}`}
             width={1300}
             height={630}

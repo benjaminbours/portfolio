@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import DateFormatter from "@/app/_components/01_atoms/date-formatter";
 import { Post } from "@/interfaces/post";
+import { withBasePath } from "@/lib/constants";
 
 export function PostPreview({
   title,
@@ -15,11 +16,11 @@ export function PostPreview({
   return (
     <Link
       className="post-preview"
-      href={`/${lang}/blog/posts/${slug}`}
+      href={`/blog/posts/${slug}`}
       aria-label={title}
     >
       <Image
-        src={coverImage}
+        src={withBasePath(coverImage)}
         alt={`Cover Image for ${title}`}
         width={1300}
         height={630}
