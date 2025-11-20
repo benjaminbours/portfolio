@@ -1,5 +1,5 @@
 ---
-title: 'Footdata - Prédictions & Analyses de Matchs de Football'
+title: 'Oddslab - Prédictions & Analyses de Matchs de Football'
 excerpt: 'Une plateforme data-driven pour les prédictions de matchs de football et l''analyse statistique. Utilisant des algorithmes de machine learning pour analyser les performances d''équipes, statistiques de joueurs et données historiques.'
 coverImage: '/assets/blog/hello-world/cover.jpg'
 date: '2024-03-20'
@@ -12,8 +12,8 @@ tags:
   - PostgreSQL
   - Analyse de Données
 featured: true
-demoUrl: 'https://footdata.yourdomain.com'
-githubUrl: 'https://github.com/yourusername/footdata'
+demoUrl: 'https://oddslab.gg'
+# githubUrl: 'https://github.com/yourusername/footdata'
 screenshots:
   - '/assets/projects/footdata-1.jpg'
   - '/assets/projects/footdata-2.jpg'

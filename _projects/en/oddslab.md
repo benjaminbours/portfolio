@@ -1,5 +1,5 @@
 ---
-title: 'Footdata - Football Match Predictions & Analytics'
+title: 'Oddslab - Your Football Prediction Laboratory'
 excerpt: 'An interactive web application for building and testing custom football match prediction models. Built with Rust and WebAssembly for blazing-fast client-side calculations.'
 coverImage: '/assets/projects/footdata-2.png'
 date: '2025-10-30'
@@ -12,7 +12,7 @@ tags:
   - Axum
   - TypeScript
 featured: true
-demoUrl: 'https://footprediction-pphu.vercel.app'
+demoUrl: 'https://oddslab.gg'
 # githubUrl: 'https://github.com/yourusername/footdata'
 screenshots:
   - '/assets/projects/footdata-1.png'
@@ -22,7 +22,7 @@ screenshots:
 
 ## Overview
 
-Footdata is an interactive football prediction platform that empowers users to build and test their own match prediction models. Rather than presenting black-box predictions, the application lets users explore how different factors (attack strength, defense, form) influence match outcomes through an intuitive, real-time interface powered by WebAssembly.
+Oddslab is an interactive football prediction platform that empowers users to build and test their own match prediction models. Rather than presenting black-box predictions, the application lets users explore how different factors (attack strength, defense, form) influence match outcomes through an intuitive, real-time interface powered by WebAssembly.
 
 **Note**: This is an active work-in-progress project exploring Rust/WASM for web applications. Many features are still in development.
 
